@@ -1,0 +1,46 @@
+{{>header}}
+        {{#if successfulContactMessage}}
+
+        <div class="ui success message transition">
+          <i class="close icon"></i>
+          <div class="header">
+            Thank you for reaching out!
+          </div>
+          <p>I will be in touch with you soon.</p>
+        </div>
+        {{else if failedContactMessage}}
+        <div class="ui negative message transition">
+          <i class="close icon"></i>
+          <div class="header">
+            Something went wrong please try again!
+          </div>
+          <p>Please be sure to enter a valid email.</p>
+        </div>
+        {{/if}}
+        <div id="contactBody" class="eight wide centered column">
+
+            <div class="formHeader six wide column ">
+              <h1>I look forward to hearing from you!</h1>
+            </div>
+              <form id='form' class="" action="/contact" method="POST">
+                <input class="name" type="text" name="clientName" placeholder="Name">
+                <br>
+                <input class="email" type="text" name="clientEmail" value="" placeholder="Email">
+                <br>
+                <p class='help'>How can I help?</p>
+                <input class="contactType" type="radio" name="contactType" value="client">
+                <label for="contactType"> I need a website or web app!</label>
+                <br>
+                <input class="contactType" type="radio" name="contactType" value="company">
+                <label for="contactType2">I am looking to hire!</label>
+                <p class="description">Description:</p>
+                <textarea name="contactDescriptionBody" rows="8" cols="40" placeholder='Please tell me more about your project.'></textarea>
+                <br>
+                <button class='ui primary button' type="submit" name="button">Submit</button>
+              </form>
+        </div>
+
+
+      </div> <!-- end of main -->
+    </div> <!-- END OF UI GRID -->
+{{>footer}}

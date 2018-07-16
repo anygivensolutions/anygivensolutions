@@ -1,0 +1,31 @@
+$color-lightGrey:  #DBDBDB;
+$color-medGrey:  #8F8888;
+$color-darkGrey:  #423838;
+$color-darkGreen:  #324236;
+$color-lightGreen:  #888F8A;
+$color-green: #185c10;
+$color-orange: #CF5914;
+$font-mada: 'mada';
+$font-passageway: 'PassagewayLight';
+$font-src: 'url("fonts/passagewaylight")';
+$font-heading: 2em;
+$font-heading2: 1em;
+$font-para: 1.2em;
+
+@font-face {
+  font-family: passageway;
+  src: url('./../fonts/PassagewayLight.otf');
+}
+
+//nav
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+  color:  black;
+  font-family: $font-mada, sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+}

@@ -1,0 +1,140 @@
+/* AGSGreen 258313 */
+//todo - finish sub iPad mobile views
+/* grey  */
+/* CSS Normalize */
+@font-face {
+    font-family: passageway;
+src: url("./../fonts/PassagewayLight.otf"); }
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+box-sizing: border-box; }
+
+body {
+    color: #e4e4e4;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+    background-color: #090B08;
+}
+.ui.grid > .row {
+    padding: 0px;
+    margin: 10px;
+}
+
+.header.row {
+    margin: 20px;
+    padding: 10px;
+}
+
+.header_socialIcons,a {
+    color: #258313;
+    padding: 10px;
+}
+
+#logo {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: passageway;
+}
+.header_logo {
+    font-size: 2em;
+    text-align: center;
+    padding: 0;
+    color: #258313;
+}
+
+.header_mobileMenuIcon {
+    padding: 10px;
+    padding-left: 5px;
+    padding-top: 10px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    margin: 0px;`
+    
+}
+.bars {
+    color: #258313;
+}
+ul,a,li {
+    list-style: none;
+    display: inline;
+    text-decoration: none;
+    text-align: center;
+}
+
+.header_mobileNav.row {
+    font-size: 1.8em;
+
+    margin-bottom: 5px;
+    text-align: center;
+    padding-left: .4em;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    display: none;
+}
+
+#portfolioHeading {
+    margin-left: 25px;
+    margin-bottom: -15px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    font-size: 2em;
+}
+
+.portfolio_individualProject {
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.portfolio_individualProject.row {
+    background-color: #3c3c3c;
+    opacity: 75%;
+    border-radius: 12px;
+    margin: 10px;
+}
+
+.mini.ui.primary.button {
+    width: 100%;
+    padding:10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin: 5px;
+    margin-left: 0px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #258313;
+    border-width: 2px;
+    background-color: #444943;
+    color: white;
+}
+
+#projectButtons {
+    color: white;
+}
+
+#contactBody {
+    background-color: #3c3c3c;
+    opacity: 75%;
+    border-radius: 12px;
+    margin: 10px;
+}
+
+textarea {max-width:95%;}
+
+@media screen and (min-width: 300px) {
+    #desktopMenu {
+        display: none;
+    }
+}
+
+#footer {
+    padding: 10px;
+}

@@ -17,10 +17,14 @@
           <p>Please be sure to enter a valid email.</p>
         </div>
         {{/if}}
-        <div id="contactBody" class="eight wide centered column">
+        <div id="contactHeading">
+        Contact
+        </div>
 
+        <div id="contactBody" class="eight wide centered column">
+                
             <div class="formHeader six wide column ">
-              <h1>I look forward to hearing from you!</h1>
+              <h1 class="headingTwo">I look forward to hearing from you!</h1>
             </div>
               <form id='form' class="" action="/contact" method="POST">
                 <input class="name" type="text" name="clientName" placeholder="Name">
@@ -31,12 +35,12 @@
                 <input class="contactType" type="radio" name="contactType" value="client">
                 <label for="contactType"> I need a website or web app!</label>
                 <br>
-                <input class="contactType" type="radio" name="contactType" value="company">
+                <input class="contactType contactType2" type="radio" name="contactType" value="company">
                 <label for="contactType2">I am looking to hire!</label>
                 <p class="description">Description:</p>
                 <textarea name="contactDescriptionBody" rows="8" cols="40" placeholder='Please tell me more about your project.'></textarea>
                 <br>
-                <button class='ui primary button' type="submit" name="button">Submit</button>
+                <button class='ui primary button submit' type="submit" name="button">Submit</button>
               </form>
         </div>
 

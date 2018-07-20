@@ -4,7 +4,7 @@
 /* CSS Normalize */
 @font-face {
     font-family: passageway;
-src: url("./../fonts/PassagewayLight.otf"); }
+src: url("./../styles/fonts/PassagewayLight.otf"); }
 * {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -35,13 +35,13 @@ body {
 #logo {
     padding-left: 5px;
     padding-right: 5px;
-    font-family: passageway;
 }
 .header_logo {
     font-size: 2em;
     text-align: center;
     padding: 0;
     color: #258313;
+    font-family: passageway;
 }
 
 .header_mobileMenuIcon {
@@ -120,15 +120,62 @@ img {
     color: white;
 }
 
+#contactHeading {
+    margin-left: 25px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    font-size: 2em;
+}
+
 #contactBody {
     background-color: #3c3c3c;
     opacity: 75%;
     border-radius: 12px;
-    margin: 10px;
+    margin-left: 38px;
+    margin-bottom: 10px;
+    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    min-width: 80%;
+    color: black;
 }
 
-textarea {max-width:95%;}
+.headingTwo {
+    font-size: 1.3em;
+    text-align: center;
+    margin:10px;
+}
 
+.name{
+    margin-top: 25px;
+}
+
+.email {
+    margin-top: 5px;
+}
+
+.help {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+.contactType2 {
+    margin-top: 5px;
+}
+
+.description {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.contactDescriptionBody {
+    margin-top: 0px;
+}
+textarea {max-width:95%;}
+.ui.primary.button.submit {
+    background-color: #258313;
+    color: white
+}
 @media screen and (min-width: 300px) {
     #desktopMenu {
         display: none;
@@ -137,4 +184,5 @@ textarea {max-width:95%;}
 
 #footer {
     padding: 10px;
+    color: #258313;
 }

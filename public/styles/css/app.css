@@ -4,7 +4,13 @@
 /* CSS Normalize */
 @font-face {
     font-family: passageway;
-src: url("./../styles/fonts/PassagewayLight.otf"); }
+src: url("./../styles/fonts/PassagewayLight.otf"); 
+}
+
+@font-face {
+    font-family: Mada;
+}
+
 * {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -12,7 +18,7 @@ box-sizing: border-box; }
 
 body {
     color: #e4e4e4;
-    font-family: sans-serif;
+    font-family: 'Mada',sans-serif;
     font-weight: 600;
     font-size: 1em;
     background-color: #090B08;

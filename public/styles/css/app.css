@@ -1,12 +1,13 @@
 /* AGSGreen 258313 */
-//todo - finish sub iPad mobile views
+/* todo - finish sub iPad mobile views */
 /* grey  */
 /* CSS Normalize */
 @font-face {
     font-family: passageway;
-src: url("./../styles/fonts/PassagewayLight.otf"); 
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../styles/fonts/passagewaylight-webfont.ttf') format('truetype');
 }
-
 @font-face {
     font-family: Mada;
 }
@@ -22,6 +23,7 @@ body {
     font-weight: 600;
     font-size: 1em;
     background-color: #090B08;
+    font-family: passageway;
 }
 .ui.grid > .row {
     padding: 0px;
@@ -41,6 +43,7 @@ body {
 #logo {
     padding-left: 5px;
     padding-right: 5px;
+    font-family: passageway;
 }
 .header_logo {
     font-size: 2em;

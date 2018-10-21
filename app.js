@@ -9,7 +9,7 @@ const {check, validationResult} = require('express-validator/check');
 const {matchedData} = require('express-validator/filter');
 const expressSanitize = require('express-sanitizer');
 const nodemailer = require('nodemailer');
-
+const serveStatic = require('serve-static');
 const app = express();
 
 mongoose.Promise = global.Promise;
@@ -47,7 +47,9 @@ app.use(function(req, res, next){
 });
 
 hbs.registerPartials(__dirname + '/views/partials');
-app.use(express.static(__dirname + '/public'));
+// app.use(express.static(__dirname + '/public'));
+app.use(serveStatic('public'));
+app.use(serveStatic('public/styles/fonts'))
 
 //home route 
 app.get('/', (req, res) => {

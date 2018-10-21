@@ -2,16 +2,7 @@
 /* todo - finish sub iPad mobile views */
 /* grey  */
 /* CSS Normalize */
-@font-face {
-    font-family: passageway;
-    font-style: normal;
-    font-weight: 400;
-    src: url('../../styles/fonts/passagewaylight-webfont.ttf') format('truetype');
-}
-@font-face {
-    font-family: Mada;
-}
-
+@import url('https://fonts.googleapis.com/css?family=Mada:200,400,500|Roboto:300,400');
 * {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -19,11 +10,10 @@ box-sizing: border-box; }
 
 body {
     color: #e4e4e4;
-    font-family: 'Mada',sans-serif;
     font-weight: 600;
     font-size: 1em;
     background-color: #090B08;
-    font-family: passageway;
+    font-family: Roboto, sans-serif;
 }
 .ui.grid > .row {
     padding: 0px;
@@ -43,14 +33,15 @@ body {
 #logo {
     padding-left: 5px;
     padding-right: 5px;
-    font-family: passageway;
+    font-family: Mada;
 }
 .header_logo {
     font-size: 2em;
     text-align: center;
     padding: 0;
     color: #258313;
-    font-family: passageway;
+    font-family: Mada;
+    font-weight: 200;
 }
 
 .header_mobileMenuIcon {

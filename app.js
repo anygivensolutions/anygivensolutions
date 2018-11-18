@@ -1,5 +1,5 @@
 const express = require('express');
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 const bodyParser = require('body-parser');
 const flash = require('connect-flash');
 const methodOverride = require('method-override');
@@ -13,7 +13,7 @@ const serveStatic = require('serve-static');
 const app = express();
 
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost:27017/anygivensolutions");
+mongoose.connect("mongodb://localhost:27017/anygivensolutions", {useNewUrlParser: true});
 
 //app config
 app.set ('view engine', 'hbs');
@@ -65,19 +65,13 @@ app.get('/contact', (req, res)=> {
 });
 
 //blog entry 
-app.get('/blog', (req, res) => {
-  Blog.find().sort({ '_id': -1
-  }).exec(function(err, allBlogs) {
-    if(err) {
-      console.log(err);
-    } else {
-      res.render('blog/inder', {
-        pageTitle: 'Any Gen Soltuions | Blog',
-        blogs: allBlogs
-      });
-    }
-  });
+app.get('/blog', (req, res) => {res.render('blog/index', {
+    pageTitle: 'Any Given Solutions | Blog'
 });
+console.log(req.body);
+console.log(req.params);
+});
+
 
 //show one post 
 app.get('/blog/:id', (req,res) => {

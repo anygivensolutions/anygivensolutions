@@ -1,26 +1,8 @@
 {{>header}}
-<div class="ui grid">
-    <div id='main' class='ui sixteen column grid'>
-        <div id='nav' class='row'>
-            <div class='column'>
-                <i id='mobileMenuIcon' class='sidebar big icon'></i>
-            </div>
-            <div id='tagline' class='twelve wide centered colum'>
-            <a href='/'><h1>Any Given solutions</h1></a>
-            <h5>Finding my place in code();</h5>
-            <a href='https://githubg.com/anygivensolutions' target='_blank'<i class='mobileSocial large github icon'></i></a>
-            <a href='https://twitter.com/ags_webdev' target='_blank'><i class='mobileSocial large twitter icon'></i></a>
-            </div>
-        </div> <! --end of nav -->
-        <div id='mobileMenu' class='navMenu sixteen wide centered column'>
-            <ul>
-                <a href='/'><li>Home</li></a>
-                <a href='/'><li>Blog</i></a>
-            </ul>
-        </div>
-        <div id='latestPosts' class='fourteen wide centered column'>
+<div id='main' class='ui sixteen column grid'>
+    <div id='latestPosts' class='fourteen wide centered column'>
 
-        {{#each blogs}}
+    {{#each blogs}}
         <div id='blogSections'>
             <p class='blogHeader'>Author: Dom | Created {{toNormalDate this.created}}</p>
             <h1>{{this.title}}</h1>
@@ -28,8 +10,7 @@
             <p class='blogBod'>{{{subString this.body}}}</p>
             <a class='readmore' href='/blog/{{this._id}}"Read More ...</a>
         </div>
-        {{/each}}
-        </div>
+    {{/each}}
     </div>
 </div>
 {{>footer}}

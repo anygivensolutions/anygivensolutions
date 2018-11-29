@@ -1,10 +1,11 @@
 const express = require('express');
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const flash = require('connect-flash');
 const methodOverride = require('method-override');
 const hbs = require('hbs');
 const session = require('express-session');
+const Blog = require ('./models/blog');
 const {check, validationResult} = require('express-validator/check');
 const {matchedData} = require('express-validator/filter');
 const expressSanitize = require('express-sanitizer');
@@ -26,7 +27,7 @@ hbs.registerHelper('toNormalDate', function(obj) {
 });
 
 hbs.registerHelper('subString', function(obj) {
-  return objs.substring(0,300);
+  return obj.substring(0,300);
 });
 
 app.use(bodyParser.urlencoded({extended:true}));
@@ -49,7 +50,7 @@ app.use(function(req, res, next){
 hbs.registerPartials(__dirname + '/views/partials');
 // app.use(express.static(__dirname + '/public'));
 app.use(serveStatic('public'));
-app.use(serveStatic('public/styles/fonts'))
+app.use(serveStatic('public/styles/fonts'));
 
 //home route 
 app.get('/', (req, res) => {
@@ -65,14 +66,18 @@ app.get('/contact', (req, res)=> {
 });
 
 //blog entry 
-app.get('/blog', (req, res) => {res.render('blog/index', {
-    pageTitle: 'Any Given Solutions | Blog'
+app.get('/blog', (req, res)=> {
+    Blog.find().sort({'_id': -1}).exec(function(err, allBlogs) {
+        if(err) {
+            console.log(err);
+    } else {
+        res.render('blog/index', {
+            pageTitle: 'Any Given Solutions | Blog',
+            blogs: allBlogs
+        });
+    }
 });
-console.log(req.body);
-console.log(req.params);
 });
-
-
 //show one post 
 app.get('/blog/:id', (req,res) => {
   Blog.findById(req.params.id, function(err, foundBlog) {

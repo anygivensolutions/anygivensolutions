@@ -12,16 +12,19 @@ const expressSanitize = require('express-sanitizer');
 const nodemailer = require('nodemailer');
 const serveStatic = require('serve-static');
 const app = express();
+require('dotenv').config();
 
+// db config
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost:27017/anygivensolutions", {useNewUrlParser: true});
+mongoose.connect(`mongodb://${process.env.USERNAME}:${process.env.PSWD}@localhost/anygivensolutions?authSource=${process.env.SOURCE}`, {useNewUrlParser: true});
 
 //app config
 app.set ('view engine', 'hbs');
 hbs.registerHelper('toJSON', function(obj) {
   return JSON.stringfy(obj. null, 2);
 });
-
+// hbs configuration 
+hbs.registerPartials(__dirname + '/views/partials');
 hbs.registerHelper('toNormalDate', function(obj) {
   return obj.toDateString();
 });
@@ -47,8 +50,7 @@ app.use(function(req, res, next){
   next();
 });
 
-hbs.registerPartials(__dirname + '/views/partials');
-// app.use(express.static(__dirname + '/public'));
+// serve public routes
 app.use(serveStatic('public'));
 app.use(serveStatic('public/styles/fonts'));
 

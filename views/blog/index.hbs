@@ -1,16 +1,14 @@
 {{>header}}
-<div id='main' class='ui sixteen column grid'>
-    <div id='latestPosts' class='fourteen wide centered column'>
+<div class='fifteen wide centered column'>
 
     {{#each blogs}}
-        <div id='blogSections'>
+        <div class='blogSections'>
             <p class='blogHeader'>Author: Dom | Created {{toNormalDate this.created}}</p>
-            <h1>{{this.title}}</h1>
+            <h1 class='blogTitle'>{{this.title}}</h1>
             {{{this.image}}}
-            <p class='blogBod'>{{{subString this.body}}}</p>
-            <a class='readmore' href='/blog/{{this._id}}"Read More ...</a>
+            <p class='blogBody'>{{{subString this.body}}}</p>
+            <a class='blogReadmore' href='/blog/{{this._id}}'>Read More ...</a>
         </div>
     {{/each}}
-    </div>
 </div>
 {{>footer}}

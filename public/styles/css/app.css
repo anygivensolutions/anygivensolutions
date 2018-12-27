@@ -120,6 +120,36 @@ img {
     color: white;
 }
 
+.blogSections {
+    background-color: #3c3c3c;
+    opacity: 75%;
+    border-radius: 12px;
+    color: #e4e4e4;
+    margin-bottom: 30px;
+}
+
+.blogBody {
+    font-color: #e4e4e4;
+    margin-left: 10px;
+    margin-right 10px;
+    margin-left: 40px;
+    text-align: center;
+}
+.blogBody,p,h2 {
+    padding-left: 10px;
+}
+
+.blogHeader {
+    background-color: #258313;
+    border-radius: 12px 12px 0px 0px;
+    padding-left: 15px;
+}
+
+.blogTitle {
+    text-align: center;
+    margin: .2rem;
+}
+
 #contactHeading {
     margin-left: 25px;
     margin-bottom: 10px;

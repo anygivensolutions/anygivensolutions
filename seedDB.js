@@ -1,8 +1,9 @@
-const mongoose = require ('mongoose');
+require('dotenv').config()
+const mongoose = require('mongoose');
 const Blog = require('./models/blog');
-mongoose.Promise = global.Promise;
-mongoose.connect(`mongodb://${process.env.USERNAME}:${process.env.PSWD}@localhost/anygivensolutions?authSource=${process.env.SOURCE}`, {useNewUrlParser: true});
 
+mongoose.Promise = global.Promise;
+mongoose.connect(`mongodb://${process.env.USERNAME}:${process.env.PSWD}@localhost/${process.env.DB}?authSource=${process.env.SOURCE}`, {useNewUrlParser: true});
 //h2 add class='inlinePostHeading' - subheadings use single quotes on classes
 //signature should be an h2
 var myBlog = new Blog ({
@@ -50,3 +51,5 @@ myBlog01.save((err) => {
     console.log('saved!');
   }
 });
+
+

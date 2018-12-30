@@ -24,8 +24,7 @@ app.use(require('express-session')({
 }));
 // db config
 mongoose.Promise = global.Promise;
-mongoose.connect(`mongodb://${process.env.USERNAME}:${process.env.PSWD}@localhost/anygivensolutions?authSource=${process.env.SOURCE}`, {useNewUrlParser: true});
-
+mongoose.connect(`mongodb://${process.env.USERNAME}:${process.env.PSWD}@localhost/${process.env.DB}?authSource=${process.env.SOURCE}`, {useNewUrlParser: true});
 //app config
 app.set ('view engine', 'hbs');
 app.use(passport.initialize());
@@ -163,6 +162,6 @@ function isLoggedIn(req, res, next){
     } res.redirect('/login');
 }
 
-app.listen(3000, ()=> {
+app.listen(`${process.env.PORT}`, ()=> {
   console.log('=====Serving AnyGivenSolutions =====');
 });

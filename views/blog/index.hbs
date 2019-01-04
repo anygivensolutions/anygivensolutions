@@ -3,7 +3,7 @@
 
     {{#each blogs}}
         <div class='blogSections'>
-            <p class='blogHeader'>Author: Dom | Created {{toNormalDate this.created}}</p>
+            <p class='blogHeader'>Author: Dom | Date Published: {{toNormalDate this.created}}</p>
             <h1 class='blogTitle'>{{this.title}}</h1>
             {{{this.image}}}
             <p class='blogBody'>{{{subString this.body}}}</p>

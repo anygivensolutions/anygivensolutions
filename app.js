@@ -70,20 +70,8 @@ app.use(serveStatic('public'));
 app.use(serveStatic('public/styles/fonts'));
 
 //home route 
-app.get('/', (req, res) => {
-  res.render('landing', {
-    pageTitle: 'Any Given Solutions | Home'
-  });
-});
-
-app.get('/contact', (req, res)=> {
-    res.render('contact/contact', {
-        pageTitle: 'Any Given Solutions | Contact'
-    });
-});
-
 //blog entry 
-app.get('/blog', (req, res)=> {
+app.get('/', (req, res)=> {
     Blog.find().sort({'_id': -1}).exec(function(err, allBlogs) {
         if(err) {
             console.log(err);

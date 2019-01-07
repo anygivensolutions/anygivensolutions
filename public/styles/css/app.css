@@ -128,7 +128,6 @@ img {
 #projectButtons {
     color: white;
 }
-
 .blogSections {
     background-color: #3c3c3c;
     opacity: 75%;
@@ -136,7 +135,13 @@ img {
     color: #e4e4e4;
     margin-bottom: 30px;
 }
-
+.blogSectionsi>a>ul {
+    display: block;
+}
+.blogList, ul,a,li {
+    display: block;
+    list-style: underline;
+}
 .blogBody {
     font-color: #e4e4e4;
     margin-left: 10px;

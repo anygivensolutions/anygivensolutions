@@ -8,7 +8,7 @@ var blogSchema = new mongoose.Schema({
     entry: Number,
     publish: String,
     author: String,
-    category: String,
+    category: [],
     created: {type: Date, default: Date.now},
     comments: [
         {

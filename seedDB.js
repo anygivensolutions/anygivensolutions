@@ -104,10 +104,42 @@ Eventually I will but for now I am happy with my iPad setup.</p>
 `
 });
 
-myBlog02.save((err) => {
+var myBlog03 = new Blog ({
+    title: 'Code, Code, Code',
+    body: `
+<p>Over the last two weeks I have been working on a few different projects. I've had a lot of fun doing them some of them personal and other for a clients. First up I started doing work on a new client project that I got. I have been working on the travel agency project that I picked up. It is a medium sized project in scope. It includes creating several internal tools and a website that is needed. The tools need to be simple, easy and extremely obvious to use. They didn't want a lot of UI buttons as that is why they don't use other software out there that can complete these functions. They wanted a customized solution for them. So I agreed to it. First up we decided to work on the first two of many internal tools they can use; an address book to keep record of their clients and an easy payments tracking system. Later on we would begin a website as a part of the project too, so I got to work.</p>
+    
+<p>First I started on the address book it took a little bit longer than expected and I'm sure it will iterate over time too of course as I am able to implement more features but they wanted something they could use ASAP, in agreement we would add more to it later. I started to work on the backend functionality first. I decided to go with NodeJS, Mongo for the DB and HBS for template rendering. I got the routes setup to view the "admin" page to show the options to get to the contacts and payment system. I left it open so that I can add more buttons later on.</p>
+<h2 class='inlinePostHeading'>Fails:</h2>    
+<p>I was using faker.js to seed my DB so I would have data to display and test on the design. I was getting a bulk write error for the longest time I wasnt sure why. I did a little research, it could have been due to the amount of contacts I was trying to add at once. I haven't had a chance to go back and test it yet to see if that was the issue but I do want to figure that out.</p>
+<h2 class='inlinePostHeading'>Success:</h2>
+<p>I was able to get the data to output and show the full master contacts list, a single contact once you choose a one contact from the list. That was one two of the major things I wanted to tackle earler and figure out. When I wasn't quite sure how I was going to do it. Once I got into the app and started working with the code I started figuring out solutions to the problems.</p>
+    
+<p>Other than that I started the process of learning Vue. I have to say I really love the framework. At first I started out with react and after spending what felt like an eternity to get react setup so I can even practice. I took a look at the Vue docs. I was up and running after a few minutes. That is when I decided to go for Vue as my front end framework to pair with express to build my apps going foward on the next several projects. I don't regret the decision at all. My first thought though was when did front end work become so involved! I lost a little love for front end work and thats how I ended up learning node and express, the front end felt tedius. After being introduced to Vue it made writing front end code fun for me again and I couldn't wait to dive in.</p>
+    
+<p>Since then I have spent the bulk of my time really trying to learn and understand the framework and how I can intergrate it with Express. That took me down a rabit hole of having to learn webpack, babel and other tools. The experience gave me valulable practice in just diving into the code and sort of reverse engineering it to figure out how things work, just so you can get it to work. That is what I ended up doing for several hours but it was fun. Before I knew it, it was dark outside and I'm sure I started when it was well within daylight hours. It took forever to figure out how to serve vue to express and get it all setup on my server and display out to the web so I could have a play ground to practice and build projects. Of course I only ended up having to change two lines of code but I had to read through several, several lines of code, dig through the folder structure and skim thorugh a lot of the files to figure that out. I can now say I won't forget how to do that going forward. Learning how to do little things like that by reading the docs and just opening up the files to see what you have and fit your code into that structure was both frustrating and rewarding at the same time. I want to learn enough of Vue to integrate it into the address book project and the other parts of that project as well. So far Vue seems simple enough to be able to do that in a short amount of time without extending out the build time too much longer than initially planned.</p>
+    
+<h2 class='inlinePostHeading'>Lessons learned:</h2>
+<p>I should have been using Vue a long time ago!</p>
+    
+<p>I am starting to realize why people prefer dev dependencies over global setups! Major plus for that, lesson learned.</p>
+    
+<p>It was easier than I thought it was going to be creating the backend logic for the contact list. It was taking longer to write the actual code that I wanted to achieve the solution than figuring out the logic behind it. I think that is something that I will get better with over time: writing code faster. I want to start tracking exactly how much time it is taking to build out each feature. So that I can track it over time the progress I am making in that regard.</p>
+    
+<p>There are other projects I want to build coming up that I would use daily one of them being a pomodoro app. I did start to build one a while back and I would like to go back and revisit that with a new approach. Instead of doing it all on the front end I want to allow it to have login capabilities so users can remember their setup settings. Then connect it to Vue on the front end for the UI. I think doing more focused session work in small 25-40 minute pomodoro sessions like that can help me speed up my output some, though not to sacrifce quality. I have fallen in love with the process, tweaking and iterating of it all. Whether its the code or the setup of developing from the iPad and creating vim into the editor that makes me most productive has all been fun and I look forward to seeing where it takes me further down the line.</p>
+    
+<p>Spending this much time coding didn't leave much time for writing about what I achieved daily and getting it posted daily. Instead of one overarching summary like this but I am ok with that for now. I think the code itself will show what I have been achieving daily through github.</p>
+    
+<p>I like being able to go back and reflect a couple of days later and write periodical updates like this with more content to show. I like that concept. I need to also get some more time in working on my own site to add more to it. Getting into the routine of all this and figuring out the best time to get it all done is going to take some time. I improve the process and tweak it constantly to work things in for instance I found I like to get the coding part done first. Then take care of the writing and admin tasks after that.</p>
+    
+<p>I am still getting everything done on the iPad. It has been handling things like a champ! I am happy with the setup so far. There are a few more things I want to add for automation on my workflow to help speed up tasks. I do have some Siri Shortcuts downloaded but I need way more. I want to start getting into creating my own eventually.</p>
+<h2 class='signature'>-Dom</h2>`
+});
+
+myBlog03.save((err) => {
   if(err) {
      console.log(err);
   } else {
-    console.log('saved 02');
+    console.log('saved 03');
   }
 });

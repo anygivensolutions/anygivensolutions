@@ -22,6 +22,7 @@ app.use(require('express-session')({
     resave: false,
     saveUninitialized: false
 }));
+
 // db config
 mongoose.Promise = global.Promise;
 mongoose.connect(`mongodb://${process.env.USERNAME}:${process.env.PSWD}@localhost/${process.env.DB}?authSource=${process.env.SOURCE}`, {useNewUrlParser: true});

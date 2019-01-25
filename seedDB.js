@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config();
 const mongoose = require('mongoose');
 const Blog = require('./models/blog');
 
@@ -37,13 +37,13 @@ var myBlog = new Blog ({
 });
 
 
-myBlog.save((err) => {
-  if(err) {
-    console.log(err);
-  } else {
-    console.log('saved!');
-  }
-});
+//myBlog.save((err) => {
+ // if(err) {
+   // console.log(err);
+ // } else {
+   // console.log('saved!');
+  //}
+//});
 
 var myBlog02 = new Blog ({
     title:'Yes, I dev from an iPad full time!',
@@ -136,10 +136,102 @@ var myBlog03 = new Blog ({
 <h2 class='signature'>-Dom</h2>`
 });
 
-myBlog03.save((err) => {
-  if(err) {
-     console.log(err);
-  } else {
-    console.log('saved 03');
-  }
+//myBlog03.save((err) => {
+  //if(err) {
+    // console.log(err);
+ // } else {
+   // console.log('saved 03');
+  //}
+//});
+
+var myBlog04 = new Blog({
+    title: 'Getting Started with Vim Series Part One',
+    body: ` 
+<p>If you are looking to get started with Vim in 2019 then you have come to the right place! Here we can learn together! Since I am also relatively new to Vim and I have been using it for several months now. I decided I wanted to help other people get up and running with Vim and share my journey with it as my main text editor. It is amazing! I started to learn Vim and incorparate it into my daily tooling since then I haven't looked back. I wish I would have started to learn it a long time ago.</p>
+
+<p>Using Vim is an investment and not a small one. It will take time and a lot of practice to become proficient but it is well worth it in the end. Over the little time that I have spent with the editor. I have seen how over time it has increased the speed in which I am able to edit a document. I can move to the end or beginning of the line quickly skip forward or back 2 or 3 words. I can make precision cuts with my text editor with minimal effort all from the keyboard! The beauty of it really shines through when your able to navigate and make the necessary edits in a file in a matter of keystrokes.</p>
+
+<h2 class='inlinePostHeading'>Why Vim?</h2>
+
+<p>Vim (Vi improved) is an improved version of Vi. Vim is all about the keyboard and ditching the mouse. It can increase your productivity when working with text based files. All of your work is done on the keyboard, reducing the need for a mouse at all. By not having to switch over to your mouse to complete arbitrary clicks, you are naturally going to speed up your work time. Aside from that Vim brings a different perspective to text editing. At first using Vim can seem slow and counter-intuitive. Once you begin to use it and become accustomed to Vim's way of thinking. Things begin to flow and feel a lot more natural and it begins to feel like we should have been editing text this way a long time ago universally.</p>
+
+<p>Vim is a text editing tool that can be both as minimal and powerful as you want. As a web developer and my primary language being JavaScript. I wanted a text editor that I could get up and running with no matter what system I am on. All I need to do is load in my configuration file and I've hit the ground running. That's what I love about Vim. No matter what environment I am in I can almost always count on it being available. That is huge for me especially when I am jumping from server to server, iPad, Mac or even maybe a PC some times when I'm not near my own iPad setup for some reason. I can always get my Vim setup quickly. Here we are going to get Vim installed, setup, ready to use and learn about basic Vim usage so you can get started today with Vim!</p>
+
+<h2 class='inlinePostHeading'>Initial installation and setup</h2>
+
+<p>Vim may already be installed on your machine. We can go into the command-line and find out this information by typing in the command:</p>
+<p>$ vim -v</p>
+
+<p>If you find it is an older version anything pre 8.0. You will want to go ahead and get the latest version available. You can get the latest version depending on your environment:</p>
+
+<h3 class='inlinePostSubheading'>macOS</h3>
+<p>Use Homebrew to install Vim. If you don't have Homebrew setup yet on your Mac. You can head over to their website brew.sh to view their docs and get that installed. Once you do run the command:</p>
+<p>$ brew install vim</p>
+
+<h3 class='inlinePostSubheading'>Ubuntu</h3>
+<p>$ sudo apt-get install vim</p>
+
+<h3 class='inlinePostSubheading'>Windows</h3>
+<p>Visit the official website to download Vim. https://www.vim.org/download.php</p>
+
+<p>Running the next command will open a new blank Vim window. This is where the magic happens. Once you have Vim installed you can go ahead and open it by running the command:</p>
+<p>$ vim</p>
+
+<h2 class='inlinePostHeading'>Vim modes:</h2>
+<p>Once you are inside a Vim window you are in what is called normal mode.</p>
+
+<p>Normal(command) - where you execute your commands like scrolling with hjkl, saving with :w, to quit without saving :q! and so on.</p>
+
+<p>Insert - is for editing or inserting text. To get to this mode type i.</p>
+
+<p>Visual - is for manipulating text selections. Visual mode has 3 sub modes that are: plain visual - character selection, line-wise visual - line selection,  and block-visual - block selection. To get to the plain visual mode type v it will work by character, V will get you to the line-wise selection of visual mode and VV will get you to the block visual mode.</p>
+
+<p>To exit any mode press ESC on your keyboard.</p>
+
+<h2 class='inlinePostHeading'>Basic file navigation</h2>
+
+<p>Now that we know how to open up a new blank file in Vim. The next step is to be able to navigate that file. You get several commands to navigate a file for editing. We want to start out with the most basic ones. I found it easier to learn one or two commands at a time. Try to become comfortable with those commands before moving on and adding more under your belt. This way it will be easier to retain and efficiently implement what you are learning on a daily basis.</p>
+
+<p>Up is k</p>
+<p>Down is j</p>
+<p>Left is h</p>
+<p>Right is l</p>
+<p>:w is save</p>
+<p>:wq is save and quit</p>
+<p>:q is quit</p>
+<p>:q! is quit without saving any changes</p>
+<p>:w <filename.txt> to save the file with a name on save.</p>
+<p>$ vim <filename.txt> is to open a file using Vim from the command line.</p>
+
+<h2 class='inlinePostHeading'>Configuration</h2>
+<p>So we now now how to open a new or existing file in Vim and navigate it but we have a pretty bare bones setup at this point. The editor can be even better and do even more for you but it requires a little more setup. Vim gives you a pretty blank slate starting off. It is up to you to configure it in a way that works best for you. If you are a person who loves to customize every thing, this is the section for you! To start, if you want line numbers to show on each file that can be done, along with linting, syntax formating and anything else you would expect from a modern day code editor. The configuration is done using a .vimrc file in your user folder. You will find many .vimrc files on the web. I would suggest starting out with a blank or near blank .vimrc file. You want to understand what you are putting into the file and what exactly it does or manipulates. At least somewhat have an understanding of what is going on before putting that code in the .vimrc. I personally started out with a completely blank file and began to build it up with features as I wanted them. My configuration file is a composition of many other configs out there. I pieced it together based on what I found in other peoples configs that works with similar technologies as I do. Even if they don't you still may find something you want to implement into your own file. Just be sure to know how it works before adding it! Don't just copy and paste everything you see.</p> 
+
+<p>Organize your .vimrc. Once you start to add more packages and configuration setup. The file is going to grow quickly as you start to figure out how to setup Vim to work for yourself. Take a look at other peoples configuration file and see how they organize it and come up with some sort of organization that works best for you. It will save you time in the long run when you can easily hop to the section you need to change instead of mindlessly scrolling hoping to come across a good place to put it.</p>
+
+<p>To start configuring Vim create your configuration file. This will create a new file called .vimrc in the current directory you are in. So you want to be sure you are in your home root directory so Vim can find the file. To create your .vimrc file go back into your command line and type:</p>
+<p>$ vim .vimrc</p>
+
+<p>For Instance say we want to see line numbers in .vim. To do so in the config file type in set number. Then :wq to save and quit Vim. If you reopen Vim by typing in either vim in the command line or vim .vimrc to reopen to config file, you should now see line numbers!</p>
+
+<p>That is only the beginning though, you can theme your editor, control how it handles those pesky tabs or spaces and almost anything else you can think of! If you are curious about all of the options available you can dig into the man pages of Vim. To get to them simply type in man vim from the command line or :help from inside Vim.</p>
+
+<p>You now have all the tools you need to open, close, edit and save a file in Vim. Now you want to just practice and explore to learn more and become more comfortable with the editor.</p>
+
+<h3 class='inlinePostSubheading'>Practice, Practice, Practice</h3>
+<p>Vim has a built-in tool you can use to practice and become more familiar with the core concepts of Vim by typing in vimtutor from your command-line. It will bring up an document that has a more thorough introduction to Vim and more about file manipulation, navigation, searching and more. It can be helpful to run through vimtutor once or twice a day as practice that is what I did when I first started out and I still run through it from time to time to refresh some concepts when needed.</p>
+
+<h2 class='inlinePostHeading'>Next steps</h2>
+<p>From here you just want to get in and maybe use it on side projects or typing up some notes on something. Use it in situations that are not very important at first. As you want to get use to the editor and how it works. You don't want to sort of learn on the job with the editor. In the beginning it will seem like it is slowing you down more than it is helping you. I would suggest maybe taking 15-30 minutes a day just using Vim to practice some of the core fundamentals of getting in and out of the different Vim modes, saving and quitting files, and basic navigation. Once you feel like you have good grasp on those concepts. We will continue to build on those and add more concepts to become even more proficient with our text manipulation. Stay tuned for the next post to learn even more about how to use Vim and getting it setup for your needs! That is coming all in part two in this getting started with Vim series.</p>
+<h2 class='signature'> -Dom</h2>
+`
+
+});
+
+myBlog04.save((err) => {
+    if(err) {
+        console.log(err);
+    } else {
+        console.log('saved 04');
+    }
+
 });

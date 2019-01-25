@@ -176,6 +176,10 @@ img {
     color: #258313;
     text-decoration: underline;
 }
+.inlinePostSubheading {
+    color: #43643D;
+    margin-left: 10px;
+}
 
 .signature {
     color: white;

@@ -1,0 +1,40 @@
+{{>header}}
+<form action='/new' method='Post' class='fourteen wide column'>
+    <div class='row'>
+        <label>Title:</label><br>
+        <input type='text' name='title'>
+    </div>
+    <div class='row'>
+        <label>Image:</label></br>
+        <input type='file' name='image'>
+    </div>
+
+    <div class='row'>
+        <label>Body:</label><br>
+        <textarea rows='10' cols='200' name='body'></textarea>
+    </div>
+
+    <div class='row'>
+        <label>Tags:</label><br>
+        <input type='text' name='tags'>
+    </div>
+
+    <div class='row'>
+        <label>Date:</label><br>
+        <input type='date' name='publish'>
+    </div>
+
+    <div class='row'>
+        <label>Categories:</label><br>
+        <input type='text' name='category'>
+    </div>
+
+    <div class='row'>
+        <label>Entry number</label><br>
+        <input type='number' name='entry'>
+    </div>
+    <button>Submit</button>
+
+</form>
+
+{{>footer}}

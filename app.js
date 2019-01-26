@@ -97,12 +97,24 @@ app.get('/blog/:id', (req,res) => {
   });
 });
 
+app.post('/new', (req, res) => {
+    res.send('you posted a new blog post');
+});
+
+
 // admin route 
 app.get ('/dashboard', isLoggedIn, (req, res) => {
     res.render('dashboard/index', {
         pageTitle: 'Any Given Solutions | Dash'
     });
 });
+app.get('/dashboard/newblog', (req, res) => {
+    res.render('blog/new');
+});
+
+
+
+
 //register
 app.get('/register', (req, res) => {
     res.render('register');
